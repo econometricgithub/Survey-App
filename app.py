@@ -44,7 +44,7 @@ class Survey(db.Model):
     location = db.Column(db.Integer)
     rural_urban2 = db.Column(db.Integer)
     fav_party = db.Column(db.Integer)
-db.init_app()
+db.init_app(app)
 @app.route('/')
 def home():
     return render_template('main_survey.html')
